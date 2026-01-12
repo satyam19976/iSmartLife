@@ -2,18 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>iSmartLife — Research, IKS & Conscious Technology</title>
 <meta name="description" content="iSmartLife is a research-driven platform integrating Indian Knowledge Systems, Yoga, neuroscience, physiology, and conscious technology." />
 
 
+<!-- Tailwind CDN (critical for layout) -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+
 <link rel="icon" href="logo.png" />
 
 
 <style>
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#f8fafc}
+body{
+font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+background:#f8fafc;
+margin:0;
+}
 h1,h2,h3{letter-spacing:-0.02em}
+img{max-width:100%;height:auto;display:block}
+a{word-break:break-word}
+
+
+/* Mobile fixes */
+@media (max-width: 640px){
+body{font-size:15px}
+h1{font-size:2rem}
+h2{font-size:1.6rem}
+h3{font-size:1.25rem}
+ul{padding-left:1.25rem}
+}
+
+
 .soft{box-shadow:0 12px 30px rgba(0,0,0,.06)}
 .rise{transition:.4s}
 .rise:hover{transform:translateY(-6px)}
@@ -74,9 +95,3 @@ background:radial-gradient(1200px 400px at 50% -10%,rgba(79,70,229,.18),transpar
 </div>
 </section>
 
-
-<!-- RESEARCH -->
-<section id="research" class="py-24 bg-gray-50">
-<div class="max-w-6xl mx-auto px-4">
-<h2 class="text-3xl font-semibold mb-16">Research Publications</h2>
-</html>
