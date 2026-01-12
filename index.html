@@ -1,205 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>iSmartLife — Research & Knowledge Systems</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>iSmartLife — Research, IKS & Conscious Technology</title>
+<meta name="description" content="iSmartLife is a research-driven platform integrating Indian Knowledge Systems, Yoga, neuroscience, physiology, and conscious technology." />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CDN (critical for layout) -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="icon" href="logo.png">
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f8fafc;
-      margin: 0;
-      overflow-x: hidden;
-    }
+<link rel="icon" href="logo.png" />
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
 
-    a {
-      color: #1d4ed8;
-      word-break: break-word;
-    }
-  </style>
+<style>
+body{
+font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+background:#f8fafc;
+margin:0;
+}
+h1,h2,h3{letter-spacing:-0.02em}
+img{max-width:100%;height:auto;display:block}
+a{word-break:break-word}
+
+
+/* Mobile fixes */
+@media (max-width: 640px){
+body{font-size:15px}
+h1{font-size:2rem}
+h2{font-size:1.6rem}
+h3{font-size:1.25rem}
+ul{padding-left:1.25rem}
+}
+
+
+.soft{box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.rise{transition:.4s}
+.rise:hover{transform:translateY(-6px)}
+.hero{
+background:radial-gradient(1200px 400px at 50% -10%,rgba(79,70,229,.18),transparent),linear-gradient(#fff,#f8fafc)
+}
+</style>
 </head>
+<body class="text-gray-800" style="overflow-x:hidden;">
 
-<body>
 
-<!-- ================= HEADER ================= -->
-<header class="bg-white shadow sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <img src="logo.png" alt="iSmartLife Logo" class="h-10 w-10">
-      <div>
-        <div class="font-semibold text-indigo-600">iSmartLife</div>
-        <div class="text-xs text-gray-500">Research & Knowledge Systems</div>
-      </div>
-    </div>
-    <nav class="flex gap-4 text-sm">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#blogs">Blogs</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<header class="bg-white sticky top-0 z-40 soft">
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img src="logo.png" class="h-10 w-10" />
+<div>
+<div class="font-semibold text-indigo-600">iSmartLife</div>
+<div class="text-xs text-gray-500">Research & Knowledge Systems</div>
+</div>
+</div>
+<nav class="flex gap-5 text-sm">
+<a href="#home" class="hover:text-indigo-600">Home</a>
+<a href="#about" class="hover:text-indigo-600">About</a>
+<a href="#research" class="hover:text-indigo-600">Research</a>
+<a href="#blogs" class="hover:text-indigo-600">Blogs</a>
+<a href="#contact" class="hover:text-indigo-600">Contact</a>
+</nav>
+</div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="home" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold">
-      Integrating Indian Knowledge Systems with Modern Science
-    </h1>
-    <p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">
-      iSmartLife is a research-driven initiative exploring Yoga, IKS,
-      neuroscience, physiology, and conscious technologies through rigorous
-      academic inquiry and public scholarship.
-    </p>
 
-    <div class="mt-10">
-      <img src="hero.gif"
-           alt="Research visualization"
-           style="max-width:900px;margin:auto;border-radius:16px;">
-    </div>
-  </div>
+<main>
+
+
+<!-- HERO -->
+<section id="home" class="hero py-20">
+<div class="max-w-6xl mx-auto px-4 text-center">
+<h1 class="text-4xl md:text-5xl font-bold">Integrating Indian Knowledge Systems with Modern Science</h1>
+<p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">iSmartLife is a research-driven initiative exploring Yoga, IKS, neuroscience, physiology, and conscious technologies through rigorous academic inquiry and public scholarship.</p>
+<div class="mt-10">
+<img src="hero.gif" alt="Research animation" style="max-width:900px;width:100%;margin:auto;border-radius:16px" />
+</div>
+</div>
 </section>
+<div style="height:40px"></div>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-20 bg-gray-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-3xl font-semibold mb-6">About iSmartLife</h2>
 
-    <p class="text-gray-700">
-      iSmartLife is an interdisciplinary platform dedicated to advancing research
-      and public understanding at the intersection of Indian Knowledge Systems
-      (IKS), Yoga, contemplative sciences, neuroscience, physiology, and emerging
-      technologies.
-    </p>
-
-    <p class="mt-4 text-gray-700">
-      The initiative emphasizes academic integrity, experimental rigor, ethical
-      responsibility, and translational impact.
-    </p>
-
-    <h3 class="mt-8 text-xl font-semibold">Founder</h3>
-    <p class="mt-2">
-      <strong>Mahesh Lohar</strong> — Principal Integrator & Founder
-    </p>
-  </div>
-</section>
-
-<!-- ================= RESEARCH ================= -->
-<section id="research" class="py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
-
-    <h2 class="text-3xl font-semibold mb-12">Research Publications</h2>
-
-    <!-- JOURNAL ARTICLES -->
-    <img src="journal-articles.jpg"
-         alt="Journal Articles"
-         style="width:100%;max-height:260px;object-fit:cover;border-radius:16px;">
-
-    <h3 class="text-2xl font-semibold mt-6">Journal Articles</h3>
-    <ul class="mt-4 list-disc ml-6 space-y-3">
-      <li>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4959333/" target="_blank">
-          Yoga and Heart Rate Variability: A Comprehensive Review
-        </a>
-        — Tyagi & Cohen (2016)
-      </li>
-      <li>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3410187/" target="_blank">
-          Yoga Breathing Through a Particular Nostril
-        </a>
-        — Telles et al. (2012)
-      </li>
-      <li>
-        <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2022.968858/full" target="_blank">
-          Acute Slow Breathing Improves Cognitive Function
-        </a>
-        — Deepeshwar et al. (2022)
-      </li>
-    </ul>
-
-    <!-- CONFERENCE PAPERS -->
-    <img src="conference-papers.jpg"
-         alt="Conference Papers"
-         style="width:100%;max-height:260px;object-fit:cover;border-radius:16px;margin-top:64px;">
-
-    <h3 class="text-2xl font-semibold mt-6">Conference Papers</h3>
-    <ul class="mt-4 list-disc ml-6 space-y-3">
-      <li>
-        <a href="https://scholar.google.com/scholar?q=autonomic+regulation+yogic+breathing+conference" target="_blank">
-          Autonomic Regulation via Yogic Breathing
-        </a>
-      </li>
-      <li>
-        <a href="https://scholar.google.com/scholar?q=wearable+yoga+monitoring" target="_blank">
-          Wearable-based Yoga Monitoring Systems
-        </a>
-      </li>
-    </ul>
-
-    <!-- BOOKS -->
-    <img src="books-chapters.jpg"
-         alt="Books and Chapters"
-         style="width:100%;max-height:260px;object-fit:cover;border-radius:16px;margin-top:64px;">
-
-    <h3 class="text-2xl font-semibold mt-6">Books & Chapters</h3>
-    <ul class="mt-4 list-disc ml-6 space-y-3">
-      <li>
-        <a href="https://www.researchgate.net/publication/384016458_Indian_Knowledge_Systems" target="_blank">
-          Indian Knowledge Systems
-        </a>
-      </li>
-      <li>
-        <a href="https://scholar.google.com/scholar?q=Yoga+and+Its+Scientific+Validation" target="_blank">
-          Yoga and Its Scientific Validation
-        </a>
-      </li>
-    </ul>
-
-  </div>
-</section>
-
-<!-- ================= BLOGS ================= -->
-<section id="blogs" class="py-20 bg-gray-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-3xl font-semibold mb-6">Research Blogs</h2>
-    <ul class="list-disc ml-6 space-y-3">
-      <li>Why Indian Knowledge Systems Need Experimental Rigor</li>
-      <li>Ethics in Yoga-Based Human Research</li>
-      <li>Breath as a Bridge Between Body and Cognition</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-semibold mb-6">Contact</h2>
-    <p>Email: <a href="mailto:ismart@manasyog.com">ismart@manasyog.com</a></p>
-    <p>Phone: +91 9422770563</p>
-    <p>Location: Pune, India</p>
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-gray-900 text-white py-6 text-center">
-  <p class="text-sm">
-    © 2026 iSmartLife — Research with Integrity
-  </p>
-</footer>
-
-</body>
+<!-- ABOUT -->
+<section id="about" class="bg-white py-20">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-3xl font-semibold mb-6">About iSmartLife</h2>
+<p class="text-gray-700">iSmartLife is an interdisciplinary platform dedicated to advancing research and public understanding at the intersection of Indian Knowledge Systems (IKS), Yoga, contemplative sciences, neuroscience, physiology, and emerging technologies.</p>
+<p class="mt-4 text-gray-700">The initiative emphasizes academic integrity, experimental rigor, ethical responsibility, and translational impact.</p>
 </html>
