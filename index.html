@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research Publications — iSmartLife</title>
+  <meta name="description" content="Comprehensive research publications hub for articles, conferences, books, theses, datasets, blogs and more — iSmartLife." />
+
+  <!-- Tailwind CDN for quick styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: #f8fafc;
+    }
+    h1,h2,h3{letter-spacing:-0.02em}
+    .glass{
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .soft-shadow{box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+    .hover-rise{transition:all .4s ease}
+    .hover-rise:hover{transform:translateY(-6px)}
+    .hero-gradient{
+      background: radial-gradient(1200px 400px at 50% -10%, rgba(99,102,241,.18), transparent),
+                  linear-gradient(to bottom, #ffffff, #f8fafc);
+    }
+    .tag{font-size:.75rem}
+    .card-link{color:#4f46e5}
+    @media print{header,footer,.controls,.admin{display:none}}
+  </style>
+
+  <!-- Structured data (example - will be updated dynamically per page or per-item) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "iSmartLife Research Publications",
+    "description": "A hub for research articles, conference papers, books, blogs, datasets and more from iSmartLife contributors.",
+    "url": "https://ismartlife.in/publications.html"
+  }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a class="flex items-center gap-3" href="/">
+        <img src="/logo.png" alt="iSmartLife" class="h-10 w-10 object-contain"/>
+        <div>
+          <h1 class="text-xl font-semibold text-indigo-600">iSmartLife</h1>
+          <div class="text-xs text-gray-500">Research Publications Hub</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex gap-4 text-sm items-center">
+        <a href="/" class="hover:text-indigo-600">Home</a>
+        <a href="/about.html" class="hover:text-indigo-600">About</a>
+        <a href="/publications.html" class="text-indigo-600 font-medium">Publications</a>
+        <a href="/contact.html" class="hover:text-indigo-600">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 scroll-smooth">
+
+    <!-- HERO -->
+    <section class="mb-10 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-gray-900">Research & Knowledge Hub</h2>
+      <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">A curated, scholarly archive of peer-reviewed research, books, conferences, datasets, and reflective essays at the intersection of Yoga, Indian Knowledge Systems, physiology, neuroscience, and contemplative technology.</p>
+      <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Designed with academic clarity, visual calm, and research integrity — inspired by leading global research institutions.</p>
+    </section>
+
+    <!-- VISUAL RESEARCH DOMAINS (SIMPLIFIED) -->
+    <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-14">
+
+      <!-- Journal Articles -->
+      <a href="#journal" class="group bg-white rounded-2xl soft-shadow hover-rise overflow-hidden">
+        <img src="/images/journal-articles.jpg" alt="Journal articles research" class="h-56 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="font-semibold text-xl">Journal Articles</h3>
+          <p class="text-sm text-gray-600 mt-2">Peer‑reviewed academic research published in national and international journals covering Yoga, IKS, neuroscience, physiology, and contemplative sciences.</p>
+        </div>
+      </a>
+
+      <!-- Conference Papers -->
+      <a href="#conference" class="group bg-white rounded-2xl soft-shadow hover-rise overflow-hidden">
+        <img src="/images/conference-papers.jpg" alt="Conference research presentations" class="h-56 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="font-semibold text-xl">Conference Papers</h3>
+          <p class="text-sm text-gray-600 mt-2">Research papers, posters, and presentations delivered at interdisciplinary conferences on science, technology, and Yoga research.</p>
+        </div>
+      </a>
+
+      <!-- Books & Chapters -->
+      <a href="#books" class="group bg-white rounded-2xl soft-shadow hover-rise overflow-hidden">
+        <img src="/images/books-chapters.jpg" alt="Books and academic manuscripts" class="h-56 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="font-semibold text-xl">Books & Chapters</h3>
+          <p class="text-sm text-gray-600 mt-2">Authored books and scholarly chapters integrating classical Yogic texts, Indian Knowledge Systems, and scientific inquiry.</p>
+        </div>
+      </a>
+
+      <!-- Research Blogs -->
+      <a href="#blogs" class="group bg-white rounded-2xl soft-shadow hover-rise overflow-hidden">
+        <img src="/images/research-blogs.jpg" alt="Scholarly research blogs" class="h-56 w-full object-cover" />
+        <div class="p-5">
+          <h3 class="font-semibold text-xl">Research Blogs</h3>
+          <p class="text-sm text-gray-600 mt-2">Scholarly essays and research‑informed writing translating academic work into reflective, accessible narratives.</p>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="controls bg-white p-4 rounded-lg shadow-sm mb-6">
+      <div class="flex flex-wrap gap-3 items-center">
+        <div class="flex-1 min-w-[220px]">
+          <input id="search" placeholder="Search by title, author, keyword, journal..." class="w-full rounded border px-3 py-2 focus:outline-none" />
+        </div>
+
+        <div class="flex gap-2 items-center">
+          <select id="kindFilter" class="rounded border px-3 py-2">
+            <option value="all">All formats</option>
+            <option value="journal">Journal Articles</option>
+            <option value="conference">Conference Papers</option>
+            <option value="book">Books / Chapters</option>
+            <option value="thesis">Theses</option>
+            <option value="dataset">Datasets</option>
+            <option value="blog">Blog Posts</option>
+            <option value="report">Technical Reports</option>
+          </select>
+
+          <select id="sortBy" class="rounded border px-3 py-2">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="author">Author (A→Z)</option>
+          </select>
+
+          <button id="resetBtn" class="px-3 py-2 rounded bg-gray-100">Reset</button>
+        </div>
+
+        <!-- small utilities -->
+        <div class="ml-auto flex gap-2 items-center">
+          <button id="exportBibAll" class="text-sm px-3 py-2 rounded border">Export BibTeX (All)</button>
+          <a id="rssLink" href="/publications.rss" class="text-sm px-3 py-2 rounded border">RSS</a>
+        </div>
+      </div>
+
+      <!-- tag cloud (dynamic) -->
+      <div id="tagCloud" class="mt-3 flex flex-wrap gap-2"></div>
+    </section>
+
+    <!-- ================= JOURNAL ARTICLES ================= -->
+    <section id="journal" class="mb-16">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6 border-b pb-2">Journal Articles</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Mindful Nasal Breathing and Heart Rate Variability</h3>
+          <p class="text-sm text-gray-500 mt-1">S. Tiwari et al. — Journal of Integrative Physiology, 2025</p>
+          <p class="mt-3 text-gray-700 text-sm">A randomized controlled investigation examining short-term effects of unilateral and mindful nasal breathing practices on HRV parameters.</p>
+        </article>
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Physiological Correlates of Iḍā and Piṅgalā Nāḍīs</h3>
+          <p class="text-sm text-gray-500 mt-1">S. Tiwari — Journal of Consciousness Studies, 2024</p>
+          <p class="mt-3 text-gray-700 text-sm">A theoretical and experimental synthesis relating classical Yogic concepts with autonomic and neural dynamics.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= CONFERENCE PAPERS ================= -->
+    <section id="conference" class="mb-16">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6 border-b pb-2">Conference Papers</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Low-Cost Dual Sensor System for Nasal Dominance Detection</h3>
+          <p class="text-sm text-gray-500 mt-1">BioSignals Conference, 2024</p>
+          <p class="mt-3 text-gray-700 text-sm">Presentation of a novel wearable device designed to capture nasal airflow dominance in real-world conditions.</p>
+        </article>
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Breathing Patterns and Cognitive Performance</h3>
+          <p class="text-sm text-gray-500 mt-1">International Yoga Research Conference, 2023</p>
+          <p class="mt-3 text-gray-700 text-sm">Exploration of acute breathing interventions on attention, reaction time, and autonomic markers.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= BOOKS & CHAPTERS ================= -->
+    <section id="books" class="mb-16">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6 border-b pb-2">Books & Chapters</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Exploring Svara Yoga</h3>
+          <p class="text-sm text-gray-500 mt-1">Book — School of Mantra Publications</p>
+          <p class="mt-3 text-gray-700 text-sm">A comprehensive volume integrating classical Svara Yoga literature with modern experimental findings.</p>
+        </article>
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Breath, Mind, and Autonomic Regulation</h3>
+          <p class="text-sm text-gray-500 mt-1">Book Chapter — Contemporary Yoga Research</p>
+          <p class="mt-3 text-gray-700 text-sm">A scholarly chapter examining breath regulation as a bridge between Yogic practice and neuroscience.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH BLOGS ================= -->
+    <section id="blogs" class="mb-8">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6 border-b pb-2">Research Blogs</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Why IKS Needs Experimental Rigor</h3>
+          <p class="text-sm text-gray-500 mt-1">iSmartLife Research Blog</p>
+          <p class="mt-3 text-gray-700 text-sm">A reflective essay on balancing traditional wisdom with modern scientific methodology.</p>
+        </article>
+        <article class="bg-white rounded-xl soft-shadow p-6">
+          <h3 class="text-lg font-semibold">Ethics in Yoga-Based Human Research</h3>
+          <p class="text-sm text-gray-500 mt-1">iSmartLife Research Blog</p>
+          <p class="mt-3 text-gray-700 text-sm">Discussion on ethical responsibility, teacher–student boundaries, and research integrity.</p>
+        </article>
+      </div>
+    </section>
+
+    
+    <!-- ADMIN: CSV upload to add publications (only visible when `?admin=true` in URL) -->
+    <section class="admin mt-8 bg-white p-4 rounded shadow-sm hidden">
+      <h3 class="font-semibold">Admin — bulk upload</h3>
+      <p class="text-xs text-gray-500">Upload CSV with columns: id,title,authors,year,venue,kind,abstract,doi,url,pdf,keywords,tags</p>
+      <div class="mt-2 flex gap-2 items-center">
+        <input id="csvFile" type="file" accept=".csv" />
+        <button id="importCsvBtn" class="px-3 py-2 rounded bg-indigo-600 text-white">Import CSV</button>
+        <button id="clearLocalBtn" class="px-3 py-2 rounded border">Clear local</button>
+      </div>
+      <p id="adminMsg" class="text-sm text-green-600 mt-2"></p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-4 mt-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-gray-600">© 2026 iSmartLife — built for reproducible research. Provide feedback: <a href="/contact.html" class="underline">Contact</a></div>
+  </footer>
+
+
+<script>
+// -----------------------------
+// Sample dataset (replace with real data)
+// -----------------------------
+const publications = [
+  {
+    id: 'p1',
+    title: 'The Short-term Effects of Mindful Nasal Breathing Practices on Heart Rate Variability: A Randomized Controlled Trial',
+    authors: ['Satyam Tiwari','Anmol Kumar'],
+    year: 2025,
+    venue: 'Journal of Integrative Neuroscience',
+    kind: 'journal',
+    abstract: 'Randomized study on the effect of nasal breathing practices on HRV parameters (RMSSD, SDNN).',
+    doi: '10.1234/jin.2025.001',
+    url: 'https://ismartlife.in/papers/nasal-hrv-2025.pdf',
+    pdf: 'https://ismartlife.in/papers/nasal-hrv-2025.pdf',
+    keywords: ['HRV','nasal breathing','pranayama','RMSSD'],
+    tags: ['Svara','HRV']
+  },
+  {
+    id: 'p2',
+    title: 'Nasal Dominance and 24-hour HRV Monitoring — A Low-cost Sensor Approach',
+    authors: ['Satyam Tiwari','Kavya Sharma'],
+    year: 2024,
+    venue: 'International Conference on BioSignals 2024',
+    kind: 'conference',
+    abstract: 'Presentation on dual-sensor nasal dominance detection and 24-hour HRV correlations.',
+    doi: '',
+    url: 'https://ismartlife.in/papers/nasal-24h.pdf',
+    pdf: 'https://ismartlife.in/papers/nasal-24h.pdf',
+    keywords: ['nasal dominance','sensors','24-hour'],
+    tags: ['sensor','conference']
+  },
+  {
+    id: 'p3',
+    title: 'Exploring Svara Yoga: Traditional Insights and Modern Investigations on Yogi Nasal Breathing',
+    authors: ['Satyam Tiwari'],
+    year: 2025,
+    venue: 'School of Mantra (book)',
+    kind: 'book',
+    abstract: 'A book combining classical sources and experimental studies about Svara Yoga.',
+    doi: '',
+    url: 'https://ismartlife.in/books/svara-yoga.html',
+    pdf: '',
+    keywords: ['Svara','Yoga','book'],
+    tags: ['book']
+  },
+  {
+    id: 'p4',
+    title: 'Blog: Integrating IKS and Modern Physiology — Methods & Ethics',
+    authors: ['Satyam Tiwari'],
+    year: 2025,
+    venue: 'iSmartLife Blog',
+    kind: 'blog',
+    abstract: 'A reflective blog post exploring methods, ethics and translational possibilities for IKS research.',
+    doi: '',
+    url: 'https://ismartlife.in/blogs/iks-methods-ethics',
+    pdf: '',
+    keywords: ['IKS','ethics','methods'],
+    tags: ['blog']
+  }
+];
+
+// local state
+let state = {query:'', kind:'all', sort:'newest', page:1, perPage:6, tagFilter: null};
+
+// detect admin mode
+if (new URLSearchParams(window.location.search).get('admin') === 'true'){
+  document.querySelector('.admin').classList.remove('hidden');
+}
+
+// utility: render
+function renderGrid(list){
+  const grid = document.getElementById('pubGrid');
+  grid.innerHTML = '';
+  list.forEach(p => {
+    const el = document.createElement('article');
+    el.className = 'bg-white p-4 rounded shadow-sm';
+    el.innerHTML = `
+      <h3 class="text-lg font-semibold"><a class="card-link" href="${p.url}" target="_blank">${escapeHtml(p.title)}</a></h3>
+      <div class="text-sm text-gray-500 mt-1">${escapeHtml(p.authors.join(', '))} — ${p.venue}, ${p.year}</div>
+      <p class="text-sm text-gray-700 mt-2">${escapeHtml(truncate(p.abstract,180))}</p>
+      <div class="mt-3 flex justify-between items-center">
+        <div class="flex gap-2 items-center">
+          ${p.pdf ? `<a class="text-indigo-600 text-sm hover:underline" href="${p.pdf}" target="_blank">Download PDF</a>` : ''}
+          <button class="text-sm px-2 py-1 border rounded" onclick='showModal("${p.id}")'>Details</button>
+          <button class="text-sm px-2 py-1 border rounded" onclick='copyCitation("${p.id}")'>Copy APA</button>
+          <button class="text-sm px-2 py-1 border rounded" onclick='exportBib("${p.id}")'>BibTeX</button>
+        </div>
+        <div class="text-xs text-gray-500">${p.kind}</div>
+      </div>
+      <div class="mt-3 flex gap-2 flex-wrap">${(p.tags||[]).map(t=>`<span class="tag px-2 py-1 bg-gray-100 rounded">${escapeHtml(t)}</span>`).join('')}</div>
+    `;
+    grid.appendChild(el);
+  });
+}
+
+function update(){
+  // filter
+  let list = publications.slice();
+  if (state.kind !== 'all') list = list.filter(p => p.kind === state.kind);
+  if (state.query) {
+    const q = state.query.toLowerCase();
+    list = list.filter(p => (p.title+ ' ' + p.authors.join(' ') + ' ' + (p.keywords||[]).join(' ') + ' ' + p.venue + ' ' + (p.tags||[]).join(' ')).toLowerCase().includes(q));
+  }
+  if (state.tagFilter) list = list.filter(p => (p.tags||[]).includes(state.tagFilter));
+
+  // sort
+  if (state.sort === 'newest') list.sort((a,b)=>b.year - a.year);
+  if (state.sort === 'oldest') list.sort((a,b)=>a.year - b.year);
+  if (state.sort === 'author') list.sort((a,b)=>a.authors.join(', ').localeCompare(b.authors.join(', ')));
+
+  // pagination
+  const total = list.length;
+  const pages = Math.max(1, Math.ceil(total/state.perPage));
+  state.page = Math.min(state.page, pages);
+  const start = (state.page-1)*state.perPage;
+  const pageList = list.slice(start, start + state.perPage);
+
+  renderGrid(pageList);
+  renderTagCloud();
+  document.getElementById('resultsInfo').innerText = `${total} result(s)`;
+  document.getElementById('pageInfo').innerText = `Page ${state.page} / ${pages}`;
+}
+
+// tag cloud
+function renderTagCloud(){
+  const tags = {};
+  publications.forEach(p => (p.tags||[]).forEach(t=>tags[t]= (tags[t]||0)+1));
+  const cloud = document.getElementById('tagCloud');
+  cloud.innerHTML = '';
+  Object.keys(tags).sort().forEach(t=>{
+    const btn = document.createElement('button');
+    btn.className = 'px-2 py-1 text-xs rounded bg-gray-100';
+    btn.innerText = `${t} (${tags[t]})`;
+    btn.onclick = ()=>{ state.tagFilter = state.tagFilter === t ? null : t; state.page = 1; update(); };
+    cloud.appendChild(btn);
+  });
+}
+
+// small helpers
+function escapeHtml(s){ return String(s||'').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function truncate(s,n){ return s && s.length>n ? s.slice(0,n-1)+'…' : s; }
+
+// controls events
+document.getElementById('search').addEventListener('input', e=>{ state.query = e.target.value; state.page = 1; update(); });
+document.getElementById('kindFilter').addEventListener('change', e=>{ state.kind = e.target.value; state.page = 1; update(); });
+document.getElementById('sortBy').addEventListener('change', e=>{ state.sort = e.target.value; update(); });
+document.getElementById('resetBtn').addEventListener('click', ()=>{ state={...state, query:'', kind:'all', sort:'newest', page:1, tagFilter:null}; document.getElementById('search').value=''; document.getElementById('kindFilter').value='all'; document.getElementById('sortBy').value='newest'; update(); });
+
+document.getElementById('prevPage').addEventListener('click', ()=>{ state.page = Math.max(1, state.page -1); update(); });
+document.getElementById('nextPage').addEventListener('click', ()=>{ state.page = state.page +1; update(); });
+
+// pagination initial
+state.page = 1;
+update();
+
+// Details modal (lightweight) — reuses alert for simplicity
+function showModal(id){
+  const p = publications.find(x=>x.id===id);
+  if(!p) return alert('Not found');
+  const authors = p.authors.join(', ');
+  const msg = `${p.title}\n\nAuthors: ${authors}\nVenue: ${p.venue} (${p.year})\n\nAbstract:\n${p.abstract}\n\nDOI: ${p.doi || '—'}\nURL: ${p.url}`;
+  // For production you should use a proper modal. This is minimal and accessible.
+  alert(msg);
+}
+
+// Citation helpers
+function makeAPA(p){
+  const authors = p.authors.map(a=>{
+    const parts = a.split(' '); const last = parts.pop(); const initials = parts.map(n=>n[0]+'.').join(' ');
+    return `${last}, ${initials}`;
+  }).join(', ');
+  return `${authors} (${p.year}). ${p.title}. ${p.venue}. ${p.doi ? 'https://doi.org/'+p.doi : p.url}`;
+}
+
+function copyCitation(id){
+  const p = publications.find(x=>x.id===id);
+  if(!p) return;
+  const txt = makeAPA(p);
+  navigator.clipboard.writeText(txt).then(()=>alert('APA citation copied to clipboard'));
+}
+
+// BibTeX export
+function exportBib(id){
+  if (id === 'all') return exportBibAll();
+  const p = publications.find(x=>x.id===id);
+  if(!p) return;
+  const bib = toBib(p);
+  downloadText(`${p.id || 'publication'}.bib`, bib);
+}
+
+document.getElementById('exportBibAll').addEventListener('click', ()=> exportBib('all'));
+
+function exportBibAll(){
+  const all = publications.map(p=>toBib(p)).join('\n\n');
+  downloadText('ismartlife-publications.bib', all);
+}
+
+function toBib(p){
+  const key = (p.authors[0].split(' ')[0] + p.year).replace(/\W/g,'');
+  if(p.kind === 'journal'){
+    return `@article{${key},\n  title={${p.title}},\n  author={${p.authors.join(' and ')}},\n  journal={${p.venue}},\n  year={${p.year}},\n  doi={${p.doi || ''}},\n  url={${p.url || ''}}\n}`;
+  }
+  return `@misc{${key},\n  title={${p.title}},\n  author={${p.authors.join(' and ')}},\n  howpublished={${p.venue}},\n  year={${p.year}},\n  url={${p.url || ''}}\n}`;
+}
+
+function downloadText(filename, text){
+  const blob = new Blob([text], {type:'text/plain;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// CSV import (admin)
+document.getElementById('importCsvBtn').addEventListener('click', ()=>{
+  const f = document.getElementById('csvFile').files[0];
+  if(!f) return alert('Select a CSV file');
+  const rdr = new FileReader();
+  rdr.onload = (ev)=>{
+    const text = ev.target.result;
+    const rows = text.split('\n').map(r=>r.trim()).filter(Boolean);
+    const header = rows.shift().split(',').map(h=>h.trim());
+    rows.forEach(r=>{
+      const cols = r.split(',').map(c=>c.trim());
+      const obj = {};
+      header.forEach((h,i)=> obj[h]=cols[i] || '');
+      // normalize
+      obj.authors = obj.authors ? obj.authors.split(';').map(s=>s.trim()) : ['Unknown'];
+      obj.keywords = obj.keywords ? obj.keywords.split(';').map(s=>s.trim()) : [];
+      obj.tags = obj.tags ? obj.tags.split(';').map(s=>s.trim()) : [];
+      publications.push(obj);
+    });
+    document.getElementById('adminMsg').innerText = 'Imported '+rows.length+ ' rows.';
+    update();
+  };
+  rdr.readAsText(f);
+});
+
+// clear local additions
+document.getElementById('clearLocalBtn').addEventListener('click', ()=>{ location.reload(); });
+
+// small utility: copy JSON-LD for an item (for publishers wanting schema)
+function jsonLdFor(p){
+  return JSON.stringify({
+    '@context':'https://schema.org',
+    '@type': p.kind === 'journal' ? 'ScholarlyArticle' : 'CreativeWork',
+    'name': p.title,
+    'author': p.authors.map(a=>({ '@type':'Person', 'name': a })),
+    'datePublished': String(p.year),
+    'url': p.url,
+    'keywords': p.keywords
+  }, null, 2);
+}
+
+// small keyboard accessibility: focus search on '/'
+window.addEventListener('keydown', (e)=>{ if(e.key === '/' && document.activeElement.id !== 'search'){ e.preventDefault(); document.getElementById('search').focus(); } });
+
+</script>
+
+</body>
+</html>
