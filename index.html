@@ -3,75 +3,96 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Research Publications — iSmartLife</title>
-<meta name="description" content="Comprehensive research publications hub for articles, conferences, books, theses, datasets, blogs and more — iSmartLife." />
+<title>iSmartLife — Research, IKS & Conscious Technology</title>
+<meta name="description" content="iSmartLife is a research-driven platform integrating Indian Knowledge Systems, Yoga, neuroscience, physiology, and conscious technology." />
 
 
-<!-- Tailwind CDN for quick styling -->
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="icon" href="/favicon.ico" />
+<link rel="icon" href="logo.png" />
 
 
 <style>
-body{
-font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-background: #f8fafc;
-}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#f8fafc}
 h1,h2,h3{letter-spacing:-0.02em}
-.glass{
-background: rgba(255,255,255,0.85);
-backdrop-filter: blur(12px);
-border: 1px solid rgba(0,0,0,0.05);
+.soft{box-shadow:0 12px 30px rgba(0,0,0,.06)}
+.rise{transition:.4s}
+.rise:hover{transform:translateY(-6px)}
+.hero{
+background:radial-gradient(1200px 400px at 50% -10%,rgba(79,70,229,.18),transparent),linear-gradient(#fff,#f8fafc)
 }
-.soft-shadow{box-shadow:0 10px 30px rgba(0,0,0,0.06)}
-.hover-rise{transition:all .4s ease}
-.hover-rise:hover{transform:translateY(-6px)}
-.hero-gradient{
-background: radial-gradient(1200px 400px at 50% -10%, rgba(99,102,241,.18), transparent),
-linear-gradient(to bottom, #ffffff, #f8fafc);
-}
-.tag{font-size:.75rem}
-.card-link{color:#4f46e5}
-@media print{header,footer,.controls,.admin{display:none}}
 </style>
-
-
-<!-- Structured data (example - will be updated dynamically per page or per-item) -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "CollectionPage",
-"name": "iSmartLife Research Publications",
-"description": "A hub for research articles, conference papers, books, blogs, datasets and more from iSmartLife contributors.",
-"url": "https://ismartlife.in/publications.html"
-}
-</script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="text-gray-800">
 
 
-<!-- HEADER -->
-<header class="bg-white shadow sticky top-0 z-40">
-<div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-<a class="flex items-center gap-3" href="/">
-<img src="logo.png" alt="iSmartLife" class="h-10 w-10 object-contain"/>
+<header class="bg-white sticky top-0 z-40 soft">
+<div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img src="logo.png" class="h-10 w-10" />
 <div>
-<h1 class="text-xl font-semibold text-indigo-600">iSmartLife</h1>
-<div class="text-xs text-gray-500">Research Publications Hub</div>
+<div class="font-semibold text-indigo-600">iSmartLife</div>
+<div class="text-xs text-gray-500">Research & Knowledge Systems</div>
 </div>
-</a>
-
-
-<nav class="hidden md:flex gap-4 text-sm items-center">
-<a href="/" class="hover:text-indigo-600">Home</a>
-<a href="/about.html" class="hover:text-indigo-600">About</a>
-<a href="/publications.html" class="text-indigo-600 font-medium">Publications</a>
-<a href="/contact.html" class="hover:text-indigo-600">Contact</a>
+</div>
+<nav class="flex gap-5 text-sm">
+<a href="#home" class="hover:text-indigo-600">Home</a>
+<a href="#about" class="hover:text-indigo-600">About</a>
+<a href="#research" class="hover:text-indigo-600">Research</a>
+<a href="#blogs" class="hover:text-indigo-600">Blogs</a>
+<a href="#contact" class="hover:text-indigo-600">Contact</a>
 </nav>
-
-
 </div>
 </header>
 
 
-<main class="max-w-6xl mx-auto px-4 py-8 scroll-smooth">
+<main id="home" class="hero">
+
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-4 py-20 text-center">
+<h1 class="text-4xl md:text-5xl font-bold">Integrating Indian Knowledge Systems with Modern Science</h1>
+<p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto">iSmartLife is a research-driven initiative exploring Yoga, IKS, neuroscience, physiology, and conscious technologies through rigorous academic inquiry and public scholarship.</p>
+<div class="mt-10 flex justify-center">
+<img src="research-blogs.jpg" class="rounded-2xl soft max-w-3xl" alt="Research animation" />
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="bg-white py-20">
+<div class="max-w-5xl mx-auto px-4">
+<h2 class="text-3xl font-semibold mb-6">About iSmartLife</h2>
+<p class="text-gray-700 leading-relaxed">iSmartLife is an interdisciplinary platform dedicated to advancing research and public understanding at the intersection of Indian Knowledge Systems (IKS), Yoga, contemplative sciences, neuroscience, physiology, and emerging technologies. The initiative emphasizes academic integrity, experimental rigor, ethical responsibility, and translational impact.</p>
+<p class="mt-4 text-gray-700">The platform is guided by a vision of integrating classical wisdom traditions with contemporary scientific methodologies to address individual well-being, societal health, and conscious technological development.</p>
+
+
+<div class="mt-10">
+<h3 class="text-xl font-semibold">Founder</h3>
+<p class="mt-2"><strong>Mahesh Lohar</strong> — Principal Integrator & Founder</p>
+<p class="text-gray-600 mt-1">Mahesh Lohar leads iSmartLife with a focus on systems thinking, integration of knowledge traditions, and building research ecosystems grounded in ethics and societal relevance.</p>
+</div>
+</div>
+</section>
+
+
+<!-- RESEARCH -->
+<section id="research" class="py-20">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="text-3xl font-semibold mb-10">Research Publications</h2>
+
+
+<h3 class="text-2xl font-medium mb-4">Journal Articles</h3>
+<ul class="list-disc ml-6 space-y-2">
+<li><a target="_blank" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4959333/">Yoga and Heart Rate Variability: A Comprehensive Review — Tyagi et al. (2016)</a></li>
+<li><a target="_blank" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3410187/">Yoga Breathing Through a Particular Nostril — Telles et al. (2012)</a></li>
+<li><a target="_blank" href="https://www.frontiersin.org/articles/10.3389/fpsyg.2022.968858/full">Acute Slow Breathing Improves Cognitive Function — Deepeshwar et al. (2022)</a></li>
+<li><a target="_blank" href="https://publications.ersnet.org/content/breathe/13/4/298">Physiology of Slow Breathing — Russo et al. (2017)</a></li>
+<li><a target="_blank" href="https://journals.lww.com/ijoy/fulltext/2020/13020/changes_in_heart_rate_variability_after_yoga_are.12.aspx">HRV Changes After Yoga — Shinba et al. (2020)</a></li>
+</ul>
+
+
+<h3 class="text-2xl font-medium mt-12 mb-4">Conference Papers</h3>
+<ul class="list-disc ml-6 space-y-2">
+<li><a target="_blank" href="https://scholar.google.com/scholar?q=autonomic+regulation+yogic+breathing">Autonomic Regulation via Yogic Breathing — WCIM</a></li>
+<li><a target="_blank" href="https://arxiv.org/abs/2508.18283">Technology-assisted Personalized Yoga — AI & Health</a></li>
+</html>
